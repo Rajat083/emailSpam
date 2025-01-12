@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='styles/style.css')}}">
+</head>
+<body>
+    <section class="section">   
+        <div class="column box is-half is-centered is-offset-one-quarter">
+            <h1 class="title has-text-centered" id="title">
+                EMAIL SPAM CLASSIFIER
+            </h1>
+        </div>
+        <center>
+            <div class="box column is-half is-centered" id="form">
+                <form method="POST" action="{{url_for('test')}}" class="box" id="input_form">
+                    <label class="label is-large">Mail</label>
+                    <input id="input" name="input" class="input is-medium" type="text" placeholder="Write mail here" />
+                    <button class="button is-primary is-medium" id="check">Check</button>
+                  </form>
+            </div>
+        </center>
+            
+    </section>
+    <section class="pred">
+        <div class="column is-half is-centered is-offset-one-quarter">
+            <h1 class="title has-text-centered" id="title">
+                Prediction
+            </h1>
+        </div>
+        <center>
+            <div class="column is-half is-centered" id="form">
+                <div class="box is-centered" id="output">
+                    <p class="output_text has-text-centered is-title">
+                        {% if bnb_result == 1%}
+                            <label class="tag is-danger is-large">{{bnb}}</label>
+                        {% else %}
+                            <label class="tag is-success is-large">{{bnb}}</label>
+                        {% endif %}
+                        </br>
+                        {% if rfc_result == 1%}
+                            <label class="tag is-danger is-large">{{rfc}}</label>
+                        {% else %}
+                            <label class="tag is-success is-large">{{rfc}}</label>
+                        {% endif %}
+                    </p>
+                    
+                </div>
+            </div>
+        </center>
+        
+    </section>
+</body>
+</html>

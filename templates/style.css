@@ -1,0 +1,13 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css";
+
+#form {
+    margin:50px auto;
+}
+
+#title{
+    margin: 10px auto;
+}
+
+#check{
+    margin-top: 50px;
+}
