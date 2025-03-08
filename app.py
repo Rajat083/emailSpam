@@ -70,4 +70,4 @@ def test():
 #     st.write(f'Support Vector Classifier Prediction: {predictions_meanig[predictions[1][0]]}')
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
