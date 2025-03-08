@@ -46,6 +46,12 @@
                         {% else %}
                             <label class="tag is-success is-large">{{rfc}}</label>
                         {% endif %}
+                        </br>
+                        {% if ann_result == 1%}
+                            <label class="tag is-danger is-large">{{ann}}</label>
+                        {% else %}
+                            <label class="tag is-success is-large">{{ann}}</label>
+                        {% endif %}
                     </p>
                     
                 </div>
